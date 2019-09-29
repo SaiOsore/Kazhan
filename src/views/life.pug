@@ -1,0 +1,68 @@
+extends layouts/default
+
+block variables
+  - const title = "Life"
+  - const PageBg = "./img/life.jpg" 
+  - const className = ""
+  -
+    Images = [
+        { src: './img/life/1.jpg',
+          alt: 'Kazhan in coat',
+          ph: 'Sai Osore',
+          animClass: 'rotate',
+        },
+        { src: './img/life/2.jpg',
+          alt: 'model in coat',
+          ph: 'Sai Osore',
+          animClass: 'swaying',
+        },
+        { src: './img/life/3.jpg',
+          alt: 'girl in forest',
+          ph: 'Sai Osore',
+          animClass: 'swaying-up',
+        },
+        { src: './img/life/4.jpg',
+          alt: 'beauty',
+          ph: 'Sai Osore',
+          animClass: 'rotate',
+        },
+        { src: './img/life/5.jpg',
+          alt: 'beautiful eyes',
+          ph: 'Sai Osore',
+          animClass: 'swaying-up',
+        },
+        { src: './img/life/6.jpg',
+          alt: 'girl in dress',
+          ph: 'Sai Osore',
+          animClass: 'swaying',
+        },
+        { src: './img/life/7.jpg',
+          alt: 'girl in dress',
+          ph: 'Sai Osore',
+          animClass: 'rotate',
+        },
+        { src: './img/life/8.jpg',
+          alt: 'model portret',
+          ph: 'Sai Osore',
+          animClass: 'swaying',
+        },
+        { src: './img/life/9.jpg',
+          alt: 'girl with skate',
+          ph: 'Sai Osore',
+          animClass: 'swaying-up',
+        },
+        { src: './img/life/10.JPG',
+          alt: 'white with red make-up',
+          ph: 'Sai Osore',
+          animClass: 'rotate',
+        },
+        { src: './img/life/11.jpg',
+          alt: 'white with red make-up',
+          ph: 'Sai Osore',
+          animClass: 'swaying',
+        },
+      ]
+
+block content
+  +gallery-page('life', PageBg, className)
+    +gallery(Images)

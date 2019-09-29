@@ -1,0 +1,47 @@
+extends layouts/default
+
+block variables
+  - const title = "Music"
+  - const PageBg = "./img/music.jpg" 
+  - const className = ""
+  -
+    Images = [
+        { src: './img/music/br1.jpg',
+          alt: 'model',
+          ph: 'Viktoria Temnova',
+          animClass: 'rotate',
+        },
+        { src: './img/music/br2.jpg',
+          alt: 'model',
+          ph: 'Viktoria Temnova',
+          animClass: 'swaying-up',
+        },
+        { src: './img/music/br3.jpg',
+          alt: 'model',
+          ph: 'Viktoria Temnova',
+          animClass: 'swaying',
+        },
+        { src: './img/music/br4.jpg',
+          alt: 'model',
+          ph: 'Viktoria Temnova',
+          animClass: 'rotate',
+        },
+        { src: './img/music/br5.jpg',
+          alt: 'model',
+          ph: 'Viktoria Temnova',
+          animClass: 'swaying',
+        },
+        { src: './img/music/br6.jpg',
+          alt: 'model',
+          ph: 'Viktoria Temnova',
+          animClass: 'swaying-up',
+        },
+        { src: './img/music/br7.jpg',
+          alt: 'model',
+          animClass: 'rotate',
+        },
+      ]
+
+block content
+  +gallery-page('music', PageBg, className)
+    +gallery(Images)

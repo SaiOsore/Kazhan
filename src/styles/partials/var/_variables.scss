@@ -1,0 +1,30 @@
+//colors
+$black: #000;
+$black-light: lighten($black, 10%);
+$black-dark: lighten($black, 6%);
+$white: #fff;
+
+$accent: #8B0000;
+$accent-light: lighten($accent, 40%);
+
+$second: #696969;
+$second-light: #c7c7c7;
+$second-dark: #696969;
+
+$third: green;
+
+$fourth: orange;
+
+$active: #8B0000;
+
+$alert: #FF0000;
+
+$nya: #FFB6C1;
+
+$sub: #4682B4;
+
+$shadows: 0px 0px 23px 1px rgba(0, 0, 0, 0.4);
+$shadows-mini: 0px 0px 15px 1px rgba(0, 0, 0, 0.4);
+
+$gradient-rainbow: linear-gradient(135deg, #ff20a3 0%, #ff20a3 6%, #ff1b2e 10%, #ffff50 20%, #2787f6 30%, #8e59cb 40%, #ff20a3 52.5%, #ff1b2e 60%, #ffff50 70%, #2787f6 80%, #8e59cb 90%, #ff20a3 94%);
+$gradient: linear-gradient(to bottom, rgb(249, 198, 103) 0%, rgb(252, 106, 106) 34%, rgb(244, 107, 9) 68%, rgb(247, 150, 33) 100%);

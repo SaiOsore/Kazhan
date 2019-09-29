@@ -1,0 +1,55 @@
+mixin gallery-page(title, img, className)
+  section(class=["new-page"] class=className)
+    //- .new-page__wrapper(style="background-image:url('" + img + "')")
+    //- div(class=["new-page__wrapper"] class=className)
+    div(class=title)
+      if block
+        block
+
+mixin galleryBlock(src, alt, md, ph, rt, mk)
+  ul(class="gallery GalleryJs")
+    li.gallery__item
+      a.gallery__link(href=src)
+        img.gallery__img(src=src alt=alt)
+        .gallery__info
+          if md
+            p.gallery__info-descr
+              | model: #{md}
+          if ph
+            p.gallery__info-descr
+              | photographer: #{ph}
+          if rt
+            p.gallery__info-descr
+              | retouch: #{rt}
+          if mk
+            p.gallery__info-descr
+              | make-up: #{mk}
+
+mixin gallery(arr)
+  ul(class="gallery")
+    each item in arr
+      li(class=["gallery__item"] class=item.animClass)
+        a.gallery__link()
+          img.gallery__img(src=item.src alt=item.alt)
+          .gallery__info
+            if item.title
+              h2.gallery__info-title
+                | #{item.title}
+            if item.md
+              p.gallery__info-descr
+                | model: #{item.md}
+            if item.ph
+              p.gallery__info-descr
+                | photographer: #{item.ph}
+            if item.rt
+              p.gallery__info-descr
+                | retouch: #{item.rt}
+            if item.mk
+              p.gallery__info-descr
+                | make-up: #{item.mk}
+            if item.hr
+              p.gallery__info-descr
+                | hair: #{item.hr}
+            if item.st
+              p.gallery__info-descr
+                | stylist: #{item.st}

@@ -1,0 +1,48 @@
+extends layouts/default
+
+block variables
+  - const title = "Black&White"
+  - const PageBg = "./img/bw.jpg" 
+  - const className = ""
+  -
+    Images = [
+        { src: './img/bw/bw1.jpg',
+          alt: 'bw',
+          ph: 'Ptaag',
+          animClass: 'rotate',
+        },
+        { src: './img/bw/bw2.jpg',
+          alt: 'bw',
+          ph: 'Ptaag',
+          animClass: 'rotate',
+        },
+        { src: './img/bw/bw3.jpg',
+          alt: 'bw',
+          ph: 'Ptaag',
+          animClass: 'rotate',
+        },
+        { src: './img/bw/bw4.jpg',
+          alt: 'bw',
+          ph: 'Alexander Bootsman',
+          animClass: 'rotate',
+        },
+        { src: './img/bw/bw5.jpg',
+          alt: 'bw',
+          ph: 'Alexander Bootsman',
+          animClass: 'rotate',
+        },
+        { src: './img/bw/bw6.jpg',
+          alt: 'bw',
+          ph: 'Alexander Bootsman',
+          animClass: 'rotate',
+        },
+        { src: './img/bw/bw7.jpg',
+          alt: 'bw',
+          ph: 'Alexander Bootsman',
+          animClass: 'rotate',
+        },
+      ]
+
+block content
+  +gallery-page('bw', PageBg, className)
+    +gallery(Images)

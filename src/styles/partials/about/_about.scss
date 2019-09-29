@@ -1,0 +1,41 @@
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0 auto;
+    background-color: #fff;
+    background-size: top;
+    background-position: center;
+    background-repeat: no-repeat;
+    &__container {
+        max-width: 500px;
+        text-align: center;
+        font-size: 1.2rem;
+        padding: 20px;
+        @include mobileL {
+            font-size: 1rem;
+        }
+    }
+    &__link {
+        position: relative;
+        font-size: 1.5rem;
+        font-weight: 900;
+        z-index: 1;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            height: 6px;
+            width: 0;
+            background-color: $nya;
+            z-index: -1;
+            transition: 1s;
+        }
+        &:hover:before {
+            width: 100%;
+            left: 0;
+        }
+    }
+}

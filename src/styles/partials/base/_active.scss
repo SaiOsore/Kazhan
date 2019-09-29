@@ -1,0 +1,56 @@
+.body-fixed {
+  overflow: hidden;
+}
+
+.active-block {
+  display: block;
+}
+
+.active-flex {
+  display: flex;
+}
+
+.active-color {
+  color: $accent;
+}
+
+.hidden {
+  display: none;
+}
+
+.inactive {
+  dispay: none;
+}
+
+.active {
+  display: block;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.color1 {
+    background-color: $accent;
+}
+.color2 {
+    background-color: $third;
+}
+.color3 {
+    background-color: $white;
+}
+.color4 {
+    background-color: $sub;
+}
+.color5 {
+    background-color: $nya;
+}
+.color6 {
+    background-color: $fourth;
+}

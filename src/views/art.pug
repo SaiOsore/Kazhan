@@ -1,0 +1,70 @@
+extends layouts/default
+
+block variables
+  - const title = "Art"
+  - const path = "/art.html"
+  - const PageBg = "./img/art.jpg" 
+  - const className = "new-page--red"
+  -
+    Images = [
+        { src: './img/art/beauty1.jpg',
+          alt: 'kazhan1',
+          title: 'Beauty',
+          md: 'Kazhan',
+          animClass: 'swaying',
+        },
+        { src: './img/art/beauty2.jpg',
+          alt: 'kazhan2',
+          ph: 'Sai Osore',
+          animClass: 'rotate',
+        },
+        { src: './img/art/eyes.jpg',
+          alt: 'kazhan2',
+          ph: 'Sai Osore',
+          animClass: 'swaying-up',
+        },
+        { src: './img/art/fish.jpg',
+          alt: 'kazhan2',
+          ph: 'Sai Osore',
+          animClass: 'rotate',
+        },
+        { src: './img/art/fishes.jpg',
+          alt: 'kazhan2',
+          ph: 'Sai Osore',
+          animClass: 'swaying-up',
+        },
+        { src: './img/art/ice-cream.jpg',
+          alt: 'kazhan2',
+          ph: 'Sai Osore',
+          animClass: 'swaying',
+        },
+        { src: './img/art/kid.jpg',
+          alt: 'kazhan2',
+          ph: 'Sai Osore',
+          animClass: 'rotate',
+        },
+        { src: './img/art/vamp.jpg',
+          alt: 'kazhan2',
+          ph: 'Sai Osore',
+          animClass: 'swaying-up',
+        },
+        { src: './img/art/sky.jpg',
+          alt: 'kazhan2',
+          ph: 'Sai Osore',
+          animClass: 'rotate',
+        },
+        { src: './img/art/wings.jpg',
+          alt: 'kazhan2',
+          ph: 'Sai Osore',
+          animClass: 'swaying-up',
+        },
+        { src: './img/art/flowers.jpg',
+          alt: 'kazhan2',
+          ph: 'Sai Osore',
+          animClass: 'rotate',
+        },
+      ]
+
+block content
+  +gallery-page('art', PageBg, className)
+    +gallery(Images)

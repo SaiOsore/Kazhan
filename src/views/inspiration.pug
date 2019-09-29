@@ -1,0 +1,49 @@
+extends layouts/default
+
+block variables
+  - const title = "Inspiration"
+  - const PageBg = "./img/inspiration.jpg"
+  - const className = "" 
+  -
+    Images = [
+        { src: './img/inspiration/cake.jpg',
+          alt: 'cake from head',
+          ph: 'Sai Osore',
+          animClass: 'rotate',
+        },
+        { src: './img/inspiration/cat.jpg',
+          alt: 'cat-girl with pistol',
+          ph: 'Ptaag',
+          animClass: 'swaying',
+        },
+        { src: './img/inspiration/death.jpg',
+          alt: 'chilling with death',
+          ph: 'V. Halych',
+          rt: 'Sai Osore',
+          animClass: 'swaying-up',
+        },
+        { src: './img/inspiration/demon.jpg',
+          alt: 'demon hand from the mirror',
+          ph: 'Sai Osore',
+          animClass: 'rotate',
+        },
+        { src: './img/inspiration/ghost.jpg',
+          alt: 'ghost',
+          ph: 'Sai Osore',
+          animClass: 'swaying',
+        },
+        { src: './img/inspiration/many.jpg',
+          alt: 'many',
+          ph: 'Sai Osore',
+          animClass: 'swaying-up',
+        },
+        { src: './img/inspiration/mask.jpg',
+          alt: 'mask in water',
+          ph: 'Sai Osore',
+          animClass: 'swaying',
+        },
+      ]
+
+block content
+  +gallery-page('inspiration', PageBg, className)
+    +gallery(Images)

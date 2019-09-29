@@ -1,0 +1,182 @@
+.header {
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    z-index: 111;
+    text-transform: uppercase;
+    @include tablet {
+        justify-content: space-between;
+    }
+    &__wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        opacity: .5;
+        z-index: -1;
+    }
+    &:hover .header__wrapper {
+        opacity: 1;
+    }
+    &__logo {
+        @include nav-style;
+        margin-left: 60px;
+        z-index: 5;
+        @include tablet {
+            margin-left: 0;
+        }
+        &:hover {
+            background: $gradient-rainbow;
+            background-size: 200% 100%;
+            animation: infinite-go 3s infinite;
+        }
+    }
+    &-nav {
+        display: flex;
+        @include tablet {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 10px;
+        }
+        &__link {
+            @include nav-style;
+            display: block;
+            width: 100%;
+            line-height: 1;
+            &--c1 {
+                &:hover {
+                    @extend .color1;
+                }
+            }
+            &--c2 {
+                &:hover {
+                    @extend .color2;
+                }
+            }
+            &--c3 {
+                &:hover {
+                    @extend .color3;
+                }
+            }
+            &--c4 {
+                &:hover {
+                   @extend .color4;
+                }
+            }
+            &--c5 {
+                &:hover {
+                   @extend .color5;
+                }
+            }
+            &--last {
+                &:hover {
+                   background-color: $nya;
+                }
+                @include tablet {
+                    border-top: none;
+                }
+            }
+        }
+    }
+    &-dropdown {
+        position: relative;
+        margin-right: 40px;
+        text-align: left;
+        &:hover .header-dropdown__list {
+            display: block;
+        }
+        @include tablet {
+            margin-right: 0;
+            text-align: center;
+        }
+        &__current {
+            position: relative;
+            min-width: 150px;
+            &:after {
+                content: 'V';
+                position: absolute;
+                right: .6rem;
+                top: .2rem;
+            }
+            & a {
+                @extend .color6;
+            }
+            @include tablet {
+                display: none;
+                &:after {
+                    display: none;
+                }
+                & a {
+                    background-color: $fourth;
+                }
+            }
+        }
+        &__list {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            & a {
+                border-top: none;
+            }
+            @include tablet {
+                position: relative;
+                display: block;
+                & a:first-child {
+                    border-top: 2px solid $black;
+                }
+            }
+        }
+    }
+    &__menu-btn {
+        @include nav-style;
+        position: relative;
+        display: none;
+        text-transform: uppercase;
+        font-family: Ubuntu, sans-serif;
+        font-size: 16px;
+        @include tablet {
+            display: inline-block;
+            z-index: 1;
+        }
+        &--active {
+            background-color: $white;
+            color: $white;
+            &:before {
+                @include padding-nav;
+                content: 'close';
+                position: absolute;
+                top: 0;
+                left: 0;
+                color: $accent;
+                width: 100%;
+                height: 100%;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+@keyframes infinite-go {
+  0%, 100% {
+    background-size: 200% 100%;
+  }
+  25% {
+    background-size: 300% 200%;
+  }
+  50% {
+    background-size: 400% 300%;
+  }
+  75% {
+    background-size: 200% 200%;
+  }
+}

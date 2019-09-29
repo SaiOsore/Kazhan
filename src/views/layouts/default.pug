@@ -1,0 +1,17 @@
+include ../utils/mixins
+
+block variables
+
+doctype html
+html(lang="en")
+  head
+    include ../blocks/base/head
+  body
+    include ../blocks/header/header
+    include ../blocks/aside/aside
+    .container
+      div(id="barba-wrapper" data-router-wrapper)
+        div(class="barba-container" data-router-view=path)
+          block content
+    include ../blocks/footer/footer
+    include ../blocks/base/scripts
