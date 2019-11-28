@@ -8,10 +8,10 @@ html(lang="en")
     include ../blocks/base/head
   body
     include ../blocks/header/header
-    include ../blocks/aside/aside
     .container
-      div(id="barba-wrapper" data-router-wrapper)
-        div(class="barba-container" data-router-view=path)
+      div(id="barba-wrapper")
+        div(class="barba-container")
+          include ../blocks/aside/aside
           block content
     include ../blocks/footer/footer
     include ../blocks/base/scripts

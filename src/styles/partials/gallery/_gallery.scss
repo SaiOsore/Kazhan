@@ -7,25 +7,30 @@
     align-content: flex-start;
     width: 100%;
     padding: 40px;
-    overflow: auto;
+    overflow: hidden;
     &__item {
-        flex: 33.33%;
-        max-height: 700px;
-        padding: 30px;
+        flex: calc(33.33333% - 60px);
+        max-width: calc(33.33333% - 60px);
+        margin: 30px;
         display: block;
         position: relative;
         overflow: hidden;
         text-align: center;
         @include tablet {
-            flex: 50%;
+            flex: calc(50% - 60px);
+            max-width: calc(50% - 60px);
         }
         @include mobileL {
             flex: 100%;
+            max-width: 100%;
+            margin: 0;
+            margin-bottom: 30px;
         }
     }
     &__link {
         position: relative;
         display: inline-block;
+        width: 100%;
         border: 3px solid $black;
         box-shadow: $shadows;
         @include tablet {
@@ -84,6 +89,7 @@
     &__img {
         display: block;
         max-width: 100%;
-        max-height: 500px;
+        width: 100%;
+        object-fit: cover;
     }
 }

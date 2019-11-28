@@ -4,7 +4,7 @@
     right: 2.33rem;
     transform: translateY(-50%);
     z-index: 30;
-    @include tablet {
+    @include tabletL {
       display: none;
     }
     &__link {
